@@ -2,7 +2,7 @@ package tudelft.numfinder;
 
 public class NumFinderMain {
 
-    public static void main (String[] args) {
+    public static void main (String[] args) throws EmptySequenceException {
         NumFinder nf = new NumFinder();
 
         // this works

@@ -4,14 +4,16 @@ public class NumFinder {
     private int smallest = Integer.MAX_VALUE;
     private int largest = Integer.MIN_VALUE;
 
-    public void find(int[] nums) {
-        for(int n : nums) {
+    public void find(int[] nums) throws EmptySequenceException {
+        if (nums == null || nums.length == 0)  {
+            throw new EmptySequenceException("Sequence is null or empty!");
+        }
 
-            if(n < smallest)
+        for (int n : nums) {
+            if (n < smallest)
                 smallest = n;
-            else if (n > largest)
+            if (n > largest)
                 largest = n;
-
         }
     }
 
