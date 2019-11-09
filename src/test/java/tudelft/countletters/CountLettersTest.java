@@ -17,4 +17,24 @@ public class CountLettersTest {
         Assertions.assertEquals(1, words);
     }
 
+    @Test
+    public void lastWordDoesMatch()
+    {
+        int words = new CountLetters().count("cats|horror");
+        Assertions.assertEquals(2, words);
+    }
+
+    @Test
+    public void noWordsMatch()
+    {
+        int words = new CountLetters().count("dog|fig");
+        Assertions.assertEquals(0, words);
+    }
+
+    @Test
+    public void firstWprdMatches()
+    {
+        int words = new CountLetters().count("horror|fig");
+        Assertions.assertEquals(1, words);
+    }
 }
